@@ -163,3 +163,103 @@ season == 1 ? console.log("spring")
 
     ! you MUST have an else statement
 */
+
+
+// Terminal challenge Solution
+/* 
+    if age < 18 you're a teenager
+    if age >= 18 travel but no drinking
+    if age >= 21 you can drink
+*/
+
+let age = 22;
+
+age >= 21 ? console.log("you can drink")
+    : age >= 18 ? console.log("you can travel but no drinking")
+    : console.log("you're too young");
+
+// Leap year challenge solution
+
+let year = 2023;
+
+if (year % 4 == 0 || year % 400 == 0 && year % 100 != 0) {
+  console.log(`${year} is a leap year`);
+} else {
+  console.log(`${year} is NOT a leap year`);
+}
+
+year = 1952;
+
+year % 4 == 0 || year % 400 == 0 && year % 100 != 0
+  ? console.log(`${year} is a leap year`)
+  : console.log(`${year} is NOT a leap year`);
+
+year = 2000;
+
+year % 4 == 0 || year % 400 == 0 && year % 100 != 0
+  ? console.log(`${year} is a leap year`)
+  : console.log(`${year} is NOT a leap year`);
+
+  /* 
+    ? Switch Statements
+    switches execute a block of code dependent upon a different case
+    we ask question that requires a specific response determined by our answer
+*/
+
+let uprightInstructor = "Paul";
+
+switch(uprightInstructor) {
+    // information that cases are compared to
+    case "Paul":
+        // condition that's compared against the switch
+        // executed the code below
+        console.log(`${uprightInstructor} is a Lead SD Instructor`);
+        break;
+        // used to stop other case from evaluating
+    case "Rob":
+        console.log(`${uprightInstructor} has dad jokes`);
+        break;
+    case "Henry":
+        console.log(`${uprightInstructor} is a Teaching Assistant`);
+        break;
+    default:
+        // equivalent of an else statement. a catch-all
+        console.log(`${uprightInstructor} may or may not work here`);
+}
+
+/* 
+    ? Switch Challenge
+
+    create a grade variable that holds a value (ex: 78)
+
+    create a switch statement that checks against the variable
+
+    if its above 89, console log " You got an A"
+    greater than 79 B
+    greater than 66 C
+    greater than 59 D
+    below 59 F
+    default statement of "input is not a grade"
+*/
+
+let switchGrade = 73;
+
+switch(true) {
+    case switchGrade > 89:
+        console.log("You got an A");
+        break;
+    case switchGrade > 79:
+        console.log("You got a B");
+        break;
+    case switchGrade > 66:
+        console.log("You got a C");
+        break;
+    case switchGrade > 59:
+        console.log("You got a D");
+        break;
+    case switchGrade < 59:
+        console.log("You got an F");
+        break;
+    default:
+        console.log("Input is not a grade");
+}
